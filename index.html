@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Student Feedback Portal</title>
+</head>
+<body>
+
+  <!-- Outer container table to center the page content without CSS -->
+  <table width="90%" align="center" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td>
+
+        <!-- Header -->
+        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+          <tr>
+            <td align="center">
+              <h1>Student Feedback Portal</h1>
+              <p>We value your thoughts. Share your feedback with us.</p>
+              <img src="images/banner1.jpg" alt="Students discussing wellness and studying together" >
+            </td>
+          </tr>
+        </table>
+
+        <hr>
+
+        <!-- Main form area -->
+        <form action="#" method="post" novalidate>
+
+          <!-- Student Information fieldset -->
+          <fieldset>
+            <legend><strong>Student Information</strong></legend>
+
+            <!-- Use a table to align labels and inputs -->
+            <table width="100%" cellpadding="6" cellspacing="0" border="0">
+              <tr>
+                <td width="30%"><label for="full_name">Full Name</label></td>
+                <td><input type="text" id="full_name" name="full_name" required size="50"></td>
+              </tr>
+
+              <tr>
+                <td><label for="student_id">Student ID</label></td>
+                <td><input type="text" id="student_id" name="student_id" required size="30"></td>
+              </tr>
+
+              <tr>
+                <td><label for="program">Program</label></td>
+                <td>
+                  <select id="program" name="program" required>
+                    <option value="">-- Select Program --</option>
+                    <option>BSIT</option>
+                    <option>BSCS</option>
+                    <option>BSCOE</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label for="year_level">Year Level</label></td>
+                <td>
+                  <select id="year_level" name="year_level" required>
+                    <option value="">-- Select Year --</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label for="email">Email Address</label></td>
+                <td><input type="email" id="email" name="email" required size="40"></td>
+              </tr>
+
+              <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" id="age" name="age" min="15" max="100" size="5"></td>
+              </tr>
+
+              <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                  <select id="gender" name="gender">
+                    <option value="">-- Select --</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Prefer not to say</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+
+          <br>
+
+          <!-- Weekly Wellness Tracking -->
+          <fieldset>
+            <legend><strong>Weekly Wellness Tracking (Mon–Fri)</strong></legend>
+
+            <table width="100%" cellpadding="6" cellspacing="0" border="1">
+              <caption>Record hours and minutes for each day (Monday to Friday)</caption>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Hours of Sleep</th>
+                  <th>Study Hours</th>
+                  <th>Physical Activity (Minutes)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th align="left" scope="row">Monday</th>
+                  <td><input type="number" id="sleep_mon" name="sleep_mon" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="study_mon" name="study_mon" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="activity_mon" name="activity_mon" min="0" max="1440" size="6"></td>
+                </tr>
+
+                <tr>
+                  <th align="left" scope="row">Tuesday</th>
+                  <td><input type="number" id="sleep_tue" name="sleep_tue" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="study_tue" name="study_tue" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="activity_tue" name="activity_tue" min="0" max="1440" size="6"></td>
+                </tr>
+
+                <tr>
+                  <th align="left" scope="row">Wednesday</th>
+                  <td><input type="number" id="sleep_wed" name="sleep_wed" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="study_wed" name="study_wed" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="activity_wed" name="activity_wed" min="0" max="1440" size="6"></td>
+                </tr>
+
+                <tr>
+                  <th align="left" scope="row">Thursday</th>
+                  <td><input type="number" id="sleep_thu" name="sleep_thu" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="study_thu" name="study_thu" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="activity_thu" name="activity_thu" min="0" max="1440" size="6"></td>
+                </tr>
+
+                <tr>
+                  <th align="left" scope="row">Friday</th>
+                  <td><input type="number" id="sleep_fri" name="sleep_fri" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="study_fri" name="study_fri" min="0" max="24" size="4"></td>
+                  <td><input type="number" id="activity_fri" name="activity_fri" min="0" max="1440" size="6"></td>
+                </tr>
+              </tbody>
+            </table>
+          </fieldset>
+
+          <br>
+
+          <!-- Reflection -->
+          <fieldset>
+            <legend><strong>Reflection</strong></legend>
+
+            <table width="100%" cellpadding="6" cellspacing="0" border="0">
+              <tr>
+                <td width="30%"><label for="rating">Wellness Rating</label></td>
+                <td>
+                  <select id="rating" name="rating" required>
+                    <option value="">-- Select Rating --</option>
+                    <option value="1">1 — Very Poor</option>
+                    <option value="2">2 — Poor</option>
+                    <option value="3">3 — Fair</option>
+                    <option value="4">4 — Good</option>
+                    <option value="5">5 — Excellent</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td valign="top"><label for="reflection">Reflection</label></td>
+                <td><textarea id="reflection" name="reflection" rows="6" cols="60" placeholder="How did your study and wellness habits affect your focus this week?"></textarea></td>
+              </tr>
+            </table>
+          </fieldset>
+
+          <br>
+
+          <!-- Actions and motivational line -->
+          <table width="100%" cellpadding="6" cellspacing="0" border="0">
+            <tr>
+              <td align="left">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+              </td>
+              <td align="right">
+                <em>Your wellness journey matters. Small steps create big progress!</em>
+              </td>
+            </tr>
+          </table>
+
+        </form>
+
+        <hr>
+
+        <!-- Footer -->
+        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+          <tr>
+            <td align="center">
+              <p>&copy; <span id="year">2025</span> Student Feedback Portal — Confidential</p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
